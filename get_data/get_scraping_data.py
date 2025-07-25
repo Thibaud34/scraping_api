@@ -12,7 +12,6 @@ def extract_title(book: BeautifulSoup) -> str:
     Returns:
         str: The title of the book.
     """
-# Pour le premier livre
     title = book.h3.a['title']
     return title
 
@@ -84,6 +83,7 @@ def extract_book_info(book: BeautifulSoup) -> dict:
     }
 
 
+# Récupérer le HTML de la page web
 def get_books_html(url: str) -> BeautifulSoup:
     """Fetch the HTML content of a book page.
 
@@ -95,10 +95,10 @@ def get_books_html(url: str) -> BeautifulSoup:
     """
     response = requests.get(url)
 
-# On stocke le contenu HTML dans une variable
+# Stocker le contenu HTML dans une variable
     html_content = response.content
 
-# On crée un objet BeautifulSoup pour parser le HTML
+# On crée un objet BeautifulSoup pour analyser le HTML
     soup = BeautifulSoup(html_content, "html.parser")
 
     return soup
