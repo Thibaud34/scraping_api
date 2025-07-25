@@ -18,8 +18,7 @@ def get_books_from_google_api():
         "q": "food",
         "filter": "paid-ebooks",
         "maxResults": 40,
-        "orderBy": "relevance",
-        "key": "AIzaSyBGjOHXY7YpO0k7cdMU6MxYfMmauJUn_qE"
+        "orderBy": "relevance"
     }
     
     # Requêter l'API Google Books
